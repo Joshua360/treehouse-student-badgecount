@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+    title Treehouse Profile
+    <link rel="stylesheet" href="/static/css/profile.css">
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+  body
+    #profile
+      img#avatar(src=`${parsedD.gravatar_url}` alt='Avatar')
+      p
+        span=parsedD.name
+      ul
+        li
+          span= parsedD.badges.length 
+          |  Badges earned by #{name}
+        li
+          span= parsedD.points.JavaScript
+          |  JavaScript points
+        li
+          a(href='/') search again
